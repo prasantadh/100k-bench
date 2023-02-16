@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-static const int CHUNK = 100;
+#define CHUNK 100
 static const int NSAMPLES = CHUNK * 1000;
 
 static void * s_addresses[CHUNK];

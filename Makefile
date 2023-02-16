@@ -10,13 +10,13 @@ create_processes: create_processes.c
 	gcc create_processes.c -o $@
 
 create_threads: create_threads.c
-	gcc create_threads.c -o $@
+	gcc create_threads.c -o $@ -lpthread
 
 launch_programs: launch_programs.c
 	gcc launch_programs.c -o $@
 
 mem_alloc: mem_alloc.c
-	gcc mem_alloc.c -o $@
+	gcc mem_alloc.c -o $@ -lm
 
 clean:
 	rm -rf $(binaries)
