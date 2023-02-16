@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <pthread.h>
 
+static const int CHUNK = 2000;
+static const int NSAMPLES = CHUNK * 1000;
+
 typedef pthread_t thread_t;
 
 static void* thread_fun(void* arg) {
@@ -17,9 +20,6 @@ static thread_t create_thread() {
 static void join_thread(thread_t thread) {
     pthread_join(thread, (void**) 0);
 }
-
-static const int CHUNK = 100;
-static const int NSAMPLES = CHUNK * 1000;
 
 int main(int argc, char** argv, char** envp) {
     thread_t threads[CHUNK];

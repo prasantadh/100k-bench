@@ -3,7 +3,7 @@
 #include <sys/wait.h>
 #include <stdlib.h>
 
-static const int CHUNK = 100;
+static const int CHUNK = 400;
 static const int NSAMPLES = CHUNK * 1000;
 
 int main(int argc, char** argv, char** envp) {

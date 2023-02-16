@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define CHUNK 100
-static const int NSAMPLES = CHUNK * 1000;
+#define CHUNK 10000
+static const int NSAMPLES = CHUNK * 100000;
 
 static void * s_addresses[CHUNK];
 

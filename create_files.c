@@ -3,8 +3,8 @@
 #include <string.h>
 #include <math.h>
 
-static const int NSAMPLES = 100000;
-static const int CHUNK = 100;
+static const int CHUNK = 400;
+static const int NSAMPLES = CHUNK * 1000;
 
 static double my_log2(double x) {
     static const double LOG2SCALE = 1.442695040888963;
