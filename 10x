@@ -1,0 +1,41 @@
+#!/bin/bash
+
+make clean && make
+
+function create_files() {
+    for i in {1..10}; do
+        /usr/bin/time ./create_files /tmp;
+    done;
+}
+
+function create_processes() {
+    for i in {1..10}; do
+        /usr/bin/time ./create_processes;
+    done;
+}
+
+function create_threads() {
+    for i in {1..10}; do
+        /usr/bin/time ./create_threads;
+    done;
+}
+
+function launch_programs() {
+    for i in {1..10}; do
+        /usr/bin/time ./launch_programs;
+    done;
+}
+
+function mem_alloc() {
+    for i in {1..10}; do
+        /usr/bin/time ./mem_alloc;
+    done;
+}
+
+function run_all() {
+    create_files
+    create_processes
+    create_threads
+    launch_programs
+    mem_alloc
+}
